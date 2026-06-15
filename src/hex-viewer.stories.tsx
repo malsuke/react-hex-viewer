@@ -26,16 +26,8 @@ const meta = {
       description: '追加のCSSクラス',
     },
     fontFamily: {
-      control: 'select',
-      options: [
-        'system',
-        'jetbrains-mono',
-        'fira-code',
-        'source-code-pro',
-        'consolas',
-        'courier',
-      ],
-      description: 'フォントファミリーの選択',
+      control: 'text',
+      description: 'フォントファミリー (例: "JetBrains Mono", monospace)',
     },
   },
 } satisfies Meta<typeof HexViewer>
