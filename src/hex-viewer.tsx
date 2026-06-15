@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import './hex-viewer.css'
 
-function hexStringToBytes(hexString: string): Uint8Array {
+const hexStringToBytes = (hexString: string): Uint8Array => {
   const normalized = hexString.replace(/\s+/g, '').toLowerCase()
   if (normalized.length === 0) return new Uint8Array(0)
   const padded = normalized.length % 2 === 1 ? `0${normalized}` : normalized
@@ -457,7 +457,7 @@ export const HexViewer = ({
             </div>
           </div>
         </div>
-                    
+
         {showDebugPanel && (
           <div className="rhv-debug-panel">
             <header className="rhv-debug-header">Debug</header>
