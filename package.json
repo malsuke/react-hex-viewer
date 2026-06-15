@@ -1,0 +1,80 @@
+{
+  "name": "react-hex-viewer",
+  "version": "6.4.0",
+  "description": "React component to display hex data.",
+  "main": "dist/react-hex-viewer.cjs",
+  "module": "dist/react-hex-viewer.mjs",
+  "types": "dist/react-hex-viewer.d.cts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/malsuke/react-hex-viewer.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "MALSUKE <malsuke096@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/malsuke/react-hex-viewer/issues"
+  },
+  "homepage": "https://github.com/malsuke/react-hex-viewer#readme",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "clean": "git clean -xfd dist/",
+    "build": "rollup -c --configPlugin @rollup/plugin-typescript",
+    "lint": "biome check .",
+    "prepare": "npm run build",
+    "develop": "npm run storybook",
+    "storybook": "storybook dev -p 3000",
+    "build-storybook": "storybook build",
+    "semantic-release": "semantic-release"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "@biomejs/biome": "1.9.4",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.1",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.2",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/react-vite": "^8.4.7",
+    "@storybook/test": "^8.4.7",
+    "@types/react": "^19.0.2",
+    "postcss": "^8.5.15",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rollup": "^4.29.1",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "semantic-release": "^24.2.0",
+    "storybook": "^8.4.7",
+    "typescript": "^5.7.2"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ]
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

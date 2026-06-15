@@ -1,0 +1,20 @@
+name: Lint
+
+on:
+  pull_request:
+    types: [opened, reopened]
+  push:
+    branches: [ develop ]
+
+jobs:
+  lint:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Biome
+      uses: biomejs/setup-biome@v2
+    - name: Lint
+      run: biome ci
