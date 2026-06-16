@@ -1,6 +1,6 @@
 {
-  "name": "react-hex-viewer",
-  "version": "0.0.0",
+  "name": "@malsuke/react-hex-viewer",
+  "version": "0.0.1",
   "type": "module",
   "main": "./dist/react-hex-viewer.umd.cjs",
   "module": "./dist/react-hex-viewer.js",
