@@ -1,0 +1,243 @@
+.rhv-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+.rhv-main {
+  display: flex;
+  flex: 1 1 0%;
+  min-height: 0;
+}
+
+.rhv-editor {
+  display: flex;
+  flex-direction: column;
+  background-color: #111827;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.rhv-editor:focus {
+  --tw-ring-color: rgb(59 130 246 / 0.4);
+  box-shadow: 0 0 0 2px var(--tw-ring-color);
+}
+
+.rhv-editor-with-panel {
+  width: calc(100% - 280px);
+}
+
+.rhv-editor-full {
+  width: 100%;
+}
+
+.rhv-scrollable {
+  flex: 1 1 0%;
+  overflow: auto;
+}
+
+.rhv-scrollable::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.rhv-scrollable::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.rhv-scrollable::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+.rhv-content-inner {
+  min-width: max-content;
+}
+
+.rhv-header {
+  position: sticky;
+  top: 0;
+  background-color: #111827;
+  border-bottom: 1px solid #374151;
+  padding: 0.5rem 1rem;
+  display: flex;
+  color: #9696ba;
+  font-size: 1rem;
+  user-select: none;
+  pointer-events: none;
+}
+
+.rhv-offset-label {
+  width: 4rem;
+  text-align: right;
+}
+
+.rhv-header-byte {
+  width: 1.75rem;
+  text-align: center;
+}
+
+.rhv-header-ascii-title {
+  margin-left: 1rem;
+  text-align: center;
+}
+
+.rhv-header-ascii-char {
+  text-align: center;
+}
+
+.rhv-data-container {
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.rhv-row {
+  display: flex;
+  align-items: center;
+}
+
+.rhv-row:hover {
+  background-color: rgba(31, 41, 55, 0.5);
+}
+
+.rhv-row-offset {
+  width: 4rem;
+  text-align: right;
+  margin-right: 1rem;
+  color: #9696ba;
+  font-size: 1rem;
+  user-select: none;
+  pointer-events: none;
+}
+
+.rhv-hex-bytes {
+  display: flex;
+}
+
+.rhv-hex-byte {
+  width: 1.75rem;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.rhv-text-white {
+  color: white;
+}
+.rhv-text-gray-600 {
+  color: #4b5563;
+}
+.rhv-text-gray-500 {
+  color: #6b7280;
+}
+
+.rhv-bg-selected {
+  background-color: #2563eb;
+  color: white;
+}
+
+.rhv-editor:not(.rhv-dragging)
+  .rhv-hex-byte:not(.rhv-bg-selected):not(.rhv-cursor-ring):hover {
+  background-color: #374151;
+}
+
+.rhv-editor:not(.rhv-dragging) .rhv-ascii-byte:not(.rhv-bg-selected):hover {
+  background-color: #374151;
+}
+
+.rhv-cursor-ring {
+  box-shadow: 0 0 0 1px #fbbf24;
+  border-radius: 0.125rem;
+}
+
+.rhv-cursor-nibble {
+  background-color: #fbbf24;
+  color: #111827;
+}
+
+.rhv-ascii-bytes {
+  margin-left: 1rem;
+  display: flex;
+}
+
+.rhv-ascii-byte {
+  cursor: pointer;
+  user-select: none;
+  transition-property: color, background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.rhv-text-ascii-default {
+  color: #9696ba;
+}
+
+.rhv-status-bar {
+  border-top: 1px solid #374151;
+  padding: 0.5rem 1rem;
+  background-color: #1f2937;
+  color: #9ca3af;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.rhv-debug-panel {
+  width: 280px;
+  background-color: #f9fafb;
+  border-left: 1px solid #e5e7eb;
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+.rhv-debug-header {
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.rhv-debug-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.rhv-debug-text {
+  color: #374151;
+}
+
+.rhv-debug-text-muted {
+  color: #6b7280;
+}
+
+.rhv-endian-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.rhv-checkbox {
+  width: 1rem;
+  height: 1rem;
+}
