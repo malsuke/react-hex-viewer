@@ -777,7 +777,7 @@ packages:
       react: ^19.2.7
 
   react-hex-viewer@file:../react-hex-viewer-0.0.0.tgz:
-    resolution: {integrity: sha512-lpd8C42Zhc1MzgWVU6zc9goUiYqKfMWFGrLmICdJDIhp2L4VdobHAU/4kuIaoo9u7OkYIknckXTQqNFZmzH8xg==, tarball: file:../react-hex-viewer-0.0.0.tgz}
+    resolution: {integrity: sha512-tqpA13Pyi42I7seAegD4XmKI8H2hPj7OqTJCloovOd8O5dSKuvAZHsWK765O4XcYsuEujX0MPgPHlfNxGZti9g==, tarball: file:../react-hex-viewer-0.0.0.tgz}
     version: 0.0.0
     peerDependencies:
       react: ^19.2.6
