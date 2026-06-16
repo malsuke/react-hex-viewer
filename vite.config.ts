@@ -20,11 +20,10 @@ export default defineConfig({
       fileName: "react-hex-viewer",
     },
     rollupOptions: {
-      external: ["react", "react-dom", "react/jsx-runtime"],
+      external: ["react", "react/jsx-runtime"],
       output: {
         globals: {
           react: "React",
-          "react-dom": "ReactDOM",
           "react/jsx-runtime": "jsxRuntime",
         },
       },
