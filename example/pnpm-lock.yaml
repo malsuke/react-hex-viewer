@@ -15,8 +15,8 @@ importers:
         specifier: ^19.2.6
         version: 19.2.7(react@19.2.7)
       react-hex-viewer:
-        specifier: file:react-hex-viewer-0.0.0.tgz
-        version: file:react-hex-viewer-0.0.0.tgz(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+        specifier: file:../react-hex-viewer-0.0.0.tgz
+        version: file:../react-hex-viewer-0.0.0.tgz(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
     devDependencies:
       '@eslint/js':
         specifier: ^10.0.1
@@ -776,8 +776,8 @@ packages:
     peerDependencies:
       react: ^19.2.7
 
-  react-hex-viewer@file:react-hex-viewer-0.0.0.tgz:
-    resolution: {integrity: sha512-AOBgcyPfYUCUj4CdSu9/0WUW71k7VXlFmIBRU7gOUMuxpwhtW68raai7WcBb+H3QW0jXP/Z004MFAHSL2HMI4A==, tarball: file:react-hex-viewer-0.0.0.tgz}
+  react-hex-viewer@file:../react-hex-viewer-0.0.0.tgz:
+    resolution: {integrity: sha512-lpd8C42Zhc1MzgWVU6zc9goUiYqKfMWFGrLmICdJDIhp2L4VdobHAU/4kuIaoo9u7OkYIknckXTQqNFZmzH8xg==, tarball: file:../react-hex-viewer-0.0.0.tgz}
     version: 0.0.0
     peerDependencies:
       react: ^19.2.6
@@ -1612,7 +1612,7 @@ snapshots:
       react: 19.2.7
       scheduler: 0.27.0
 
-  react-hex-viewer@file:react-hex-viewer-0.0.0.tgz(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
+  react-hex-viewer@file:../react-hex-viewer-0.0.0.tgz(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
     dependencies:
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)

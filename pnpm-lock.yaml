@@ -66,6 +66,9 @@ importers:
       vite:
         specifier: ^8.0.12
         version: 8.0.16(@types/node@24.13.2)
+      vite-plugin-css-injected-by-js:
+        specifier: ^5.0.1
+        version: 5.0.1(vite@8.0.16(@types/node@24.13.2))
       vite-plugin-dts:
         specifier: ^5.0.2
         version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@24.13.2))(rolldown@1.0.3)(typescript@6.0.3)(vite@8.0.16(@types/node@24.13.2))
@@ -1157,6 +1160,11 @@ packages:
 
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
+
+  vite-plugin-css-injected-by-js@5.0.1:
+    resolution: {integrity: sha512-JSB0jjN4VCKqG7XTUdrwiIl5gA+z2yi/tAl9WHo0X4sdyJ1yrmbLOEjf95TDoDIIuKr4GJIc7lMJG0CT88eEUQ==}
+    peerDependencies:
+      vite: '>8.0.0-0'
 
   vite-plugin-dts@5.0.2:
     resolution: {integrity: sha512-lNeHS+dwGju6eRmNvZQt8Shwv9j3m98hbHse/lIbLq9q3yE2DcIOBBYQEVUF6tS0kOmv+VA9Z5FqmzFnGe4U8g==}
@@ -2304,6 +2312,10 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
+
+  vite-plugin-css-injected-by-js@5.0.1(vite@8.0.16(@types/node@24.13.2)):
+    dependencies:
+      vite: 8.0.16(@types/node@24.13.2)
 
   vite-plugin-dts@5.0.2(@microsoft/api-extractor@7.58.9(@types/node@24.13.2))(rolldown@1.0.3)(typescript@6.0.3)(vite@8.0.16(@types/node@24.13.2)):
     dependencies:
