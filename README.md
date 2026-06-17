@@ -2,7 +2,7 @@
 
 A React component to display and edit hex data.
 
-![img](./docs/screenshot.png)
+![img](https://raw.githubusercontent.com/malsuke/react-hex-viewer/refs/heads/main/docs/screenshot.png)
 
 ## Install
 
