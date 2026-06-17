@@ -12,38 +12,32 @@ const dirname =
     ? __dirname
     : path.dirname(fileURLToPath(import.meta.url));
 
-const isLib = process.env.IS_LIB === "true";
-
 export default defineConfig({
-  plugins: isLib
-    ? [
-        cssInjectedByJsPlugin(),
-        dts({
-          tsconfigPath: resolve(__dirname, "tsconfig.app.json"),
-          entryRoot: "src",
-        }),
-      ]
-    : [],
-  build: isLib
-    ? {
-        cssCodeSplit: false,
-        lib: {
-          entry: resolve(__dirname, "src/index.ts"),
-          name: "ReactHexViewer",
-          formats: ["es", "umd"],
-          fileName: "react-hex-viewer",
+  plugins: [
+    cssInjectedByJsPlugin(),
+    dts({
+      tsconfigPath: resolve(__dirname, "tsconfig.app.json"),
+      entryRoot: "src",
+    }),
+  ],
+  build: {
+    cssCodeSplit: false,
+    lib: {
+      entry: resolve(__dirname, "src/index.ts"),
+      name: "ReactHexViewer",
+      formats: ["es", "umd"],
+      fileName: "react-hex-viewer",
+    },
+    rollupOptions: {
+      external: ["react", "react/jsx-runtime"],
+      output: {
+        globals: {
+          react: "React",
+          "react/jsx-runtime": "jsxRuntime",
         },
-        rollupOptions: {
-          external: ["react", "react/jsx-runtime"],
-          output: {
-            globals: {
-              react: "React",
-              "react/jsx-runtime": "jsxRuntime",
-            },
-          },
-        },
-      }
-    : {},
+      },
+    },
+  },
   test: {
     projects: [
       {
