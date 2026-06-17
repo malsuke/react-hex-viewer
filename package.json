@@ -1,6 +1,7 @@
 {
   "name": "@malsuke/react-hex-viewer",
-  "version": "1.0.4",
+  "version": "1.0.5",
+  "license": "MIT",
   "type": "module",
   "main": "./dist/react-hex-viewer.umd.cjs",
   "module": "./dist/react-hex-viewer.js",
