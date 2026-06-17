@@ -22,7 +22,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build --base /react-hex-viewer/"
+    "build-storybook": "storybook build"
   },
   "peerDependencies": {
     "react": "^19.2.6"
