@@ -2,6 +2,8 @@
 
 A React component to display and edit hex data.
 
+![img](./docs/screenshot.png)
+
 ## Install
 
 ```sh
@@ -20,19 +22,42 @@ or
 pnpm add @malsuke/react-hex-viewer
 ```
 
-## Use
+## Usage
 
-```jsx
-import React from 'react'
+### Basic Usage
+
+```tsx
 import { HexViewer } from '@malsuke/react-hex-viewer'
 
-export default () => {
+export default function App() {
   return (
     <HexViewer
       hexString="48656c6c6f2c20576f726c642120f09f918b"
-      fontFamily='"JetBrains Mono", monospace'
       editable={true}
       showDebugPanel={true}
+    />
+  )
+}
+```
+
+### With Next.js (next/font)
+
+For the best experience, it is recommended to use a monospace font. If you are using Next.js, you can use `next/font` to load a font and pass it to the `fontFamily` prop.
+
+```tsx
+import { JetBrains_Mono } from 'next/font/google'
+import { HexViewer } from '@malsuke/react-hex-viewer'
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+export default function Page() {
+  return (
+    <HexViewer
+      hexString="48656c6c6f2c20576f726c642120f09f918b"
+      fontFamily={jetbrainsMono.style.fontFamily}
     />
   )
 }

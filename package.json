@@ -17,11 +17,11 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && IS_LIB=true vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build --base /react-hex-viewer/"
   },
   "peerDependencies": {
     "react": "^19.2.6"
