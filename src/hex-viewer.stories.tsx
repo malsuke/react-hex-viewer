@@ -30,6 +30,9 @@ const meta = {
       description: 'フォントファミリー (例: "JetBrains Mono", monospace)',
     },
   },
+  args: {
+    fontFamily: '"JetBrains Mono", monospace',
+  },
 } satisfies Meta<typeof HexViewer>
 
 export default meta

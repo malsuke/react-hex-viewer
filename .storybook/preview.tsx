@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/react-vite'
+import '@fontsource/jetbrains-mono'
 
 const preview: Preview = {
   parameters: {
