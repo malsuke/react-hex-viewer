@@ -41,6 +41,16 @@ export default defineConfig({
   test: {
     projects: [
       {
+        // Fast, framework-agnostic unit tests for the pure logic. Runs in Node,
+        // so it needs no browser and is safe to run in CI without Playwright.
+        extends: true,
+        test: {
+          name: "unit",
+          environment: "node",
+          include: ["src/**/*.test.{ts,tsx}"],
+        },
+      },
+      {
         extends: true,
         plugins: [
           // The plugin will run tests for the stories defined in your Storybook config
